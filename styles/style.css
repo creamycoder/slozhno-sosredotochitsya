@@ -1,5 +1,127 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  margin: var(--margin-page);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: end;
+  align-items: start;
+  block-size: max(100vb, 668px);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--rec-color);
+  border-block-start: 1px solid var(--rec-color);
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--rec-color);
+  border-block-end: 1px solid var(--rec-color);
+  inset-inline-start: 0;
+  inset-block-end: 0;
+}
+
+.header__rec {
+  position: absolute;
+  display: var(--display-rec);
+  align-items: center;
+  gap: var(--gap);
+  color: var(--rec-color);
+  inset-block-start: 0;
+  inset-inline-end: 8px;
+}
+
+.header__rec::after {
+  content: '';
+  border-radius: 50%;
+  background-color: var(--rec-color);
+  block-size: 9px;
+  inline-size: 9px;
+}
+
+.header__theme-menu {
+  margin-block-start: var(--margin-menu);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.header__theme-menu-item {
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  color: var(--menu-color);
+  text-transform: lowercase;
+  text-align: center;
+  padding: 1.5px 13px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--menu-color);
+}
+
+.header__heading {
+  justify-self: start;
+  color: var(--heading-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__paragraph {
+}
+
+.title-decor {
+  color: var(--header-text-color);
+  font-weight: bold;
+  background-color: var(--header-paragraph-color);
 }
