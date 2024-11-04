@@ -1,15 +1,13 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   font-size: var(--font-size);
   font-family: var(--font-family);
   line-height: var(--line-height);
   margin: var(--margin-page);
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
@@ -28,27 +26,25 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  z-index: -1;
   display: block;
   inline-size: 25px;
   block-size: 25px;
   border-inline-end: 1px solid var(--rec-color);
   border-block-start: 1px solid var(--rec-color);
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
 }
 
 .decorated-zone::after {
   content: '';
   position: absolute;
-  z-index: -1;
   display: block;
   inline-size: 25px;
   block-size: 25px;
   border-inline-start: 1px solid var(--rec-color);
   border-block-end: 1px solid var(--rec-color);
-  inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
 }
 
 .header__rec {
@@ -57,8 +53,7 @@
   align-items: center;
   gap: var(--gap);
   color: var(--rec-color);
-  inset-block-start: 0;
-  inset-inline-end: 8px;
+  inset-inline-end: 18px;
 }
 
 .header__rec::after {
@@ -124,4 +119,24 @@
   color: var(--header-text-color);
   font-weight: bold;
   background-color: var(--header-paragraph-color);
+}
+
+.main {
+}
+
+.main__section {
+
+}
+
+.main__section-title {
+  color: #FF0070;
+}
+
+.main__section-content {
+
+  
+}
+
+.main, .main__section, .main__section-title, .main__section-content {
+  outline: 1px solid red;
 }
