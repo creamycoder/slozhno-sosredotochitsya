@@ -125,5 +125,45 @@
 
 .main {
   display: grid;
-  
+  gap: var(--main-gap);
+  padding-top: var(--main-padding);
+}
+
+.main__section {
+  display: grid;
+  gap: var(--main-section-gap);
+}
+
+.main__section-title {
+  color: var(--main-title-color);
+}
+
+.main__section-content {
+  display: grid;
+  gap: var(--main-section-content-gap);
+}
+
+.main__section-content-text {
+  color: var(--main-text-color)
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-link:hover {
+  border-bottom: 1px solid var(--link-color);
+}
+
+.text-link:focus {
+  outline: none;
+}
+
+.text-link:focus-visible {
+  outline: 1px solid var(--link-color);
 }
