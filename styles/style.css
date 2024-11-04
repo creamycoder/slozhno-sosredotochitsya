@@ -167,3 +167,19 @@
 .text-link:focus-visible {
   outline: 1px solid var(--link-color);
 }
+
+.gallery {
+  grid-template-rows: auto 142px 355px 237px 355px 237px;
+}
+
+.main__section-image {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.main__section-image-item {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
