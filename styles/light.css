@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --display-rec: none;
+    --background-color: #FFF1F7;
     --menu-color: #353430;
     --heading-color: #FFC2E6;
     --accent-color: #FF8DCB;
@@ -17,6 +18,7 @@
 
 .page.theme_light {
   --background-image: url(../images/cover-image-light.png);
+  --background-color: #FFF1F7;
   --menu-color: #353430;
   --heading-color: #FFC2E6;
   --accent-color: #FF8DCB;

@@ -1,14 +1,10 @@
 .page {
-  background-image: var(--background-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-size: var(--font-size);
-  font-family: var(--font-family);
-  line-height: var(--line-height);
-  padding: var(--page-padding);
+  background-color: var(--background-color);
   writing-mode: horizontal-tb;
+  font-size: var(--font-size);
+  font-family: var(--font-family, "IBM Plex Mono", monospace);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
 }
 
 
@@ -16,9 +12,15 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 1fr auto 1fr auto;
   justify-items: end;
   align-items: start;
+  padding: var(--page-padding);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   block-size: max(668px, 100vb);
 }
 
@@ -30,8 +32,8 @@
   border-block-start: 1px solid var(--menu-color);
   block-size: 25px;
   inline-size: 25px;
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
 }
 
 .decorated-zone::after {
@@ -42,8 +44,8 @@
   border-block-end: 1px solid var(--menu-color);
   block-size: 25px;
   inline-size: 25px;
-  inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
 }
 
 .header__rec {
@@ -52,8 +54,8 @@
   align-items: center;
   gap: var(--menu-gap);
   color: var(--menu-color);
-  inset-block-start: 0;
-  inset-inline-end: 9px;
+  inset-block-start: 10px;
+  inset-inline-end: 19px;
 }
 
 .header__rec::after {
@@ -106,27 +108,30 @@
 
 .header__heading {
   justify-self: start;
+  align-self: center;
   color: var(--heading-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.825;
-  text-shadow: 4px 2px 0 var(--accent-color);
+  font-weight: 700;
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__paragraph {
   margin-block-start: var(--paragraph-margin);
-  margin-block-end: var(--paragraph-margin);
-  max-inline-size: 364px
+  max-inline-size: 364px;
 }
 
 .title-decor {
   color: var(--title-decor-color);
   background-color: var(--accent-color);
-  font-weight: bold;
+  font-weight: 700;
+  font-size: var(--font-size);
 }
 
 .main {
   display: grid;
   gap: var(--main-gap);
+  padding: 0 var(--page-padding);
   padding-top: var(--main-padding);
 }
 
@@ -137,15 +142,17 @@
 
 .main__section-title {
   color: var(--main-title-color);
+  font-size: var(--font-size);
 }
 
 .main__section-content {
   display: grid;
+  grid-template-rows: auto 1fr;
   gap: var(--main-section-content-gap);
 }
 
 .main__section-content-text {
-  color: var(--main-text-color)
+  color: var(--main-text-color);
 }
 
 .regular {
@@ -189,7 +196,8 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto 1fr auto;
-  padding-top: var(--footer-padding);
+  padding: var(--page-padding);
+  margin-top: var(--footer-padding);
   block-size: max(668px, 100vb);
   align-items: center;
 }
@@ -246,6 +254,21 @@
     --main-gap: 80px;
   }
 
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+
+  .header__rec {
+    inset-block-start: 20px;
+    inset-inline-end: 29px;
+  }
+
   .header__heading, .footer__heading {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -256,6 +279,10 @@
 
   .main__section {
     grid-template-columns: 236px 1fr 1fr;
+  }
+
+  .main__section-content-text {
+    word-spacing: -1px;
   }
 
   .reasons .main__section-content,
@@ -292,6 +319,16 @@
   .main__section-image:nth-of-type(3) {
     grid-row: span 2;
   }
+
+  .footer::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+
+  .footer::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
 }
 
   
@@ -316,7 +353,7 @@
   }
 
   .header__paragraph {
-    max-inline-size: 491px;
+    max-inline-size: 495px;
   }
 
   .main__section {

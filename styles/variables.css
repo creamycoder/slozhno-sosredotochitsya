@@ -5,9 +5,10 @@
 
 :root {
   --background-image: url(../images/cover-image-dark.png);
-  --font-size: 18px;
+  --font-size: 20px;
+  --font-weight: 400;
   --font-family: "IBM Plex Mono", monospace;
-  --line-height: 1.3;
+  --line-height: 23.4px;
   --page-padding: 10px;
   --main-padding: 40px;
   --footer-padding: 40px;
@@ -18,6 +19,7 @@
   --main-section-content-gap: 10px;
   --menu-margin: 65px;
   --paragraph-margin: 55px;
+  --background-color: #000028;
   --menu-color: #FF0070;
   --heading-color: #DB00FF;
   --accent-color: #FF0070;
