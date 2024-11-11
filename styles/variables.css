@@ -4,27 +4,25 @@
 */
 
 :root {
+  --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
   --font-size: 20px;
-  --font-weight: 400;
   --font-family: "IBM Plex Mono", monospace;
+  --font-weight: 400;
   --line-height: 23.4px;
+  --letter-spacing: -0.18px;
   --page-padding: 10px;
-  --main-padding: 40px;
-  --footer-padding: 40px;
+  --menu-color: #FF0070;
   --display-rec: flex;
   --menu-gap: 10px;
-  --main-gap: 50px;
-  --main-section-gap: 20px;
-  --main-section-content-gap: 10px;
   --menu-margin: 65px;
-  --paragraph-margin: 55px;
-  --background-color: #000028;
-  --menu-color: #FF0070;
   --heading-color: #DB00FF;
   --accent-color: #FF0070;
-  --title-decor-color: #000028;
+  --heading-margin: 65px;
+  --paragraph-margin: 55px;
+  --title-text: #000028;
+  --main-gap: 50px;
+  --main-padding: 40px;
   --main-title-color: #FF0070;
   --main-text-color: #F1B2CE;
-  --link-color: #F1B2CE;
 }

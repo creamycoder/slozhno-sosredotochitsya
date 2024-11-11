@@ -1,14 +1,13 @@
 @media (prefers-color-scheme: light) {
   :root {
-    --display-rec: none;
     --background-color: #FFF1F7;
     --menu-color: #353430;
     --heading-color: #FFC2E6;
     --accent-color: #FF8DCB;
-    --title-decor-color: #353430;
+    --title-text: #353430;
     --main-title-color: #353430;
     --main-text-color: #353430;
-    --link-color: #FF8DCB;
+    --display-rec: none;
   }
 
   .page {
@@ -22,9 +21,8 @@
   --menu-color: #353430;
   --heading-color: #FFC2E6;
   --accent-color: #FF8DCB;
-  --title-decor-color: #353430;
+  --title-text: #353430;
   --main-title-color: #353430;
   --main-text-color: #353430;
-  --link-color: #FF8DCB;
   --display-rec: none;
 }
