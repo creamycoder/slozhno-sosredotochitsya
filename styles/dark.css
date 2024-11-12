@@ -3,6 +3,22 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #000028;
+    --menu-color: #FF0070;
+    --heading-color: #DB00FF;
+    --accent-color: #FF0070;
+    --title-text: #000028;
+    --main-title-color: #FF0070;
+    --main-text-color: #F1B2CE;
+    --display-rec: flex;
+  }
+
+  .page {
+    --background-image: url(../images/cover-image-dark.png);
+  }
+}
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
