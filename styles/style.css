@@ -186,30 +186,6 @@
   align-items: center;
 }
 
-.decorated-zone::before {
-  position: absolute;
-  display: block;
-  content: '';
-  border-inline-end: 1px solid var(--menu-color, #FF0070);
-  border-block-start: 1px solid var(--menu-color, #FF0070);
-  block-size: 25px;
-  inline-size: 25px;
-  inset-inline-end: var(--page-padding, 10px);
-  inset-block-start: var(--page-padding, 10px);
-}
-
-.decorated-zone::after {
-  position: absolute;
-  display: block;
-  content: '';
-  border-inline-start: 1px solid var(--menu-color, #FF0070);
-  border-block-end: 1px solid var(--menu-color, #FF0070);
-  block-size: 25px;
-  inline-size: 25px;
-  inset-inline-start: var(--page-padding, 10px);
-  inset-block-end: var(--page-padding, 10px);
-}
-
 .footer__heading {
   justify-self: center;
   color: var(--heading-color, #DB00FF);
