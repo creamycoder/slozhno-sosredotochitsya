@@ -1,3 +1,20 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #FFF1F7;
+    --menu-color: #353430;
+    --heading-color: #FFC2E6;
+    --accent-color: #FF8DCB;
+    --title-text: #353430;
+    --main-title-color: #353430;
+    --main-text-color: #353430;
+    --display-rec: none;
+  }
+
+  .page {
+    --background-image: url(../images/cover-image-light.png);
+  }
+}
+
 .page.theme_light {
   --background-image: url(../images/cover-image-light.png);
   --background-color: #FFF1F7;
